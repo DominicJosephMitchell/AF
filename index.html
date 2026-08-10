@@ -24,6 +24,89 @@
         nav {
             strong:
         }
+
+        .hero-section {
+            /* 1. Set the background image and its styling */
+            background-image: url('your-image-url.jpg');
+            background-size: cover;
+            /* Ensures the image fills the entire area */
+            background-position: center;
+            /* Centers the image within the element */
+            background-repeat: no-repeat;
+            /* Prevents the image from repeating */
+
+            /* 2. Control the height and layout of the container */
+            height: 400px;
+            /* Sets the height of the banner */
+            display: flex;
+            /* Activates Flexbox layout */
+            justify-content: center;
+            /* Horizontally centers the text */
+            align-items: center;
+            /* Vertically centers the text */
+            text-align: center;
+            /* Centers text lines */
+        }
+
+        .hero-text {
+            color: white;
+            /* Makes text easy to read over dark images */
+            font-family: Arial, sans-serif;
+            font-size: 32px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            /* Adds drop shadow for contrast */
+        }
+
+        /* Container holding the image and the text */
+        .container {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        /* Bottom left text */
+        .bottom-left {
+            position: absolute;
+            bottom: 8px;
+            left: 16px;
+        }
+
+        /* Top left text */
+        .top-left {
+            position: absolute;
+            top: 8px;
+            left: 16px;
+        }
+
+        /* Top right text */
+        .top-right {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+        }
+
+        /* Bottom right text */
+        .bottom-right {
+            position: absolute;
+            bottom: 8px;
+            right: 16px;
+        }
+
+        /* Centered text */
+        .centeredone {
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .centeredtwo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     </style>
 
 </head>
@@ -70,30 +153,49 @@
             </div>
         </nav>
         <!-- Header-->
-        <header class="bg-light py-5">
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center justify-content-center">
-                    <div class="col-lg-8 col-xl-7 col-xxl-6">
-                        <div class="my-5 text-center text-xl-start">
-                            <h2 class="fw-bolder mb-0">Advantage Financial Services LLC
-                            </h2>
-                            <br>
-                            <p class="lead fw-normal text-muted mb-4">We value our customers</p>
-                            <br />
-                            <p class="lead fw-normal text-muted mb-4">
-                                </pclass> Help express our appreciation,
-                                mention the code: "Web Customer Offer" for special consideration
-                                the next time you speak with one of our representatives.</p>
-                            <div><img src="assets/img/city.PNG " width="535" ; height="300"
-                                    class="mx-auto d-block img-fluid " alt="..." /></div>
+        <!--         <section>
+            <div class="hero-section">
+                <header class="bg-light py-5">
+                    <div class="container px-5">
+                        <div class="row gx-5 align-items-center justify-content-center">
+                            <div class="col-lg-8 col-xl-7 col-xxl-6">
+                                <div class="my-5 text-center text-xl-start">
+
+                                    <h2 class="fw-bolder mb-0">Advantage Financial Services LLC
+                                    </h2>
+                                    <br>
+                                    <p class="lead fw-normal text-muted mb-4">We value our customers</p>
+                                    <br />
+                                    <p class="lead fw-normal text-muted mb-4">
+                                        </pclass> Help express our appreciation,
+                                        mention the code: "Web Customer Offer" for special consideration
+                                        the next time you speak with one of our representatives.</p>
+                                    <div><img src="assets/img/city.PNG " width="535" ; height="300"
+                                            class="mx-auto d-block img-fluid " alt="..." /></div>
+                                </div>
+                                <p class="lead fw-normal text-muted mb-4">
+                                    </pclass> At Advantage Financial Services - we are customer focused.</p>
+                            </div>
                         </div>
-                        <p class="lead fw-normal text-muted mb-4">
-                            </pclass> At Advantage Financial Services - we are customer focused.</p>
                     </div>
-                </div>
+                </header>
             </div>
+        </section>
+ -->
+        <section>
+            <div class="container">
+                <img src="assets/img/city.PNG " alt="Snow" style="width:100%;">
+                <div class="bottom-left">Bo</div>
+                <div class="top-left">Top Left</div>
+                <div class="top-right">Top Right</div>
+                <div class="bottom-right">Bottom Right</div>
+                <div class="centeredone">Advantage Financial Services LLC</div>
+                <br>
+                <div class="centeredtwo">We value our customers</div>
+
             </div>
-        </header>
+
+        </section>
         <!-- Features section-->
         <section class="py-5" id="features">
             <div class="container px-5 my-5">
