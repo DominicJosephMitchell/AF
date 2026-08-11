@@ -22,7 +22,7 @@
         }
 
         nav {
-            strong:
+            font-weight: bold;
         }
 
         /* 1. Create a responsive container for the image and text */
@@ -43,6 +43,16 @@
             display: block;
         }
 
+/*         .overlay-text1,
+        .overlay-text2,
+        .overlay-text3,
+        .overlay-text4,
+        .overlay-text5 {
+            font-size: clamp(1rem, 4vw, 3rem);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            font-family: sans-serif;
+        }
+ */
         /* 3. Layer the text perfectly on top of the image */
         .overlay-text1 {
             position: absolute;
@@ -137,20 +147,15 @@
                         <div class="container">
                             <div class="image-container">
                                 <img src="assets/img/city.PNG " alt="Your Background Image">
-                                <h2>
-                                    <div class="overlay-text1">Advantage Financial Services LLC</div>
-                                </h2>
-                                <h3>
-                                    <div class="overlay-text2">We value our customers</div>
-                                </h3>
+                                    <h2 class="overlay-text1">Advantage Financial Services LLC</h2>
+                                    <h3 class="overlay-text2">We value our customers</h3>
                                 <br>
-                                <h4>
-                                    <div class="overlay-text3">Help express our appreciation,
+                                    <h4 class="overlay-text3">Help express our appreciation,
                                         mention the code: "Web Customer Offer" for special consideration
-                                        the next time you speak with one of our representatives.</div>
-                                </h4>
-                                <br>
-                                <h5><div class="overlay-text4">At Advantage Financial Services-We are customer focused</div></h5>
+                                        the next time you speak with one of our representatives.</h4>
+                                <br>                               
+                                    <h5 class="overlay-text4">At Advantage Financial Services-We are customer focused
+                                    </h5>                           
                                 <div class="overlay-text5"></div>
                             </div>
 
