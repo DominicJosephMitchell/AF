@@ -2,332 +2,814 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Advantage Financial</title>
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <!-- Bootstrap icons-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Advantage Financial Services LLC - Equipment financing and business funding solutions.">
+    <title>Advantage Financial Services LLC</title>
+
     <style>
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        p {
-            text-align: center;
+        :root {
+            --navy: #0c2541;
+            --blue: #1261a8;
+            --light-blue: #eaf4fb;
+            --gold: #f2b632;
+            --white: #ffffff;
+            --light: #f6f8fa;
+            --dark: #18212b;
+            --gray: #66717d;
+            --border: #dce3e9;
+            --shadow: 0 12px 35px rgba(12, 37, 65, .10);
+            --radius: 16px;
         }
 
-        nav,
-        h1,
-        h2 {
-            font-weight: bold;
-        }
-
-        /* 1. Create a responsive container for the image and text */
-        .image-container {
-            position: relative;
-            width: 100%;
-            max-width: 1600px;
-            /* Optional: Sets a max size for large screens */
-            margin: 0 auto;
-        }
-
-        /* 2. Ensure the image resizes perfectly with the screen */
-        .image-container img {
-            width: 100%;
-            height: clamp(400px, 50vw, 800px);
-            object-fit: cover;
-            object-position: center;
-            display: block;
-        }
-
-        /* 3. Layer the text perfectly on top of the image */
-        .overlay-text1 {
-            position: absolute;
-            top: 10%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            text-align: center;
-            width: 80%;
-        }
-
-        /* Keeps text away from the very edge of the image */
-        .overlay-text2 {
-            position: absolute;
-            top: 30%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            text-align: center;
-            width: 80%;
-        }
-
-        /* Keeps text away from the very edge of the image */
-        .overlay-text3 {
-            position: absolute;
-            top: 60%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            text-align: center;
-            width: 80%;
-        }
-
-        /* Keeps text away from the very edge of the image */
-        .overlay-text4 {
-            position: absolute;
-            top: 85%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            text-align: center;
-            width: 80%;
-        }
-
-        /* Keeps text away from the very edge of the image */
-        .overlay-text5 {
-            position: absolute;
-            top: 90%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            text-align: center;
-            width: 80%;
-        }
-
-        .overlay-text1,
-        .overlay-text2,
-        .overlay-text3,
-        .overlay-text4,
-        .overlay-text5 {
-            /* 4. The Magic: Fluid font sizing */
-            /* font-size: clamp(1rem, 4vw, 3rem); */
-            /* Optional formatting */
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-            font-family: sans-serif;
-        }
-
-        .image-container {
-            position: relative;
-            width: 100%;
+        * {
+            box-sizing: border-box;
             margin: 0;
+            padding: 0;
         }
 
-        .image-container img {
-            width: 100%;
-            height: auto;
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--dark);
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
             display: block;
+        }
+
+        /* =========================
+           TOP BAR
+        ========================= */
+
+        .topbar {
+            background: var(--navy);
+            color: #ffffff;
+            font-size: .9rem;
+        }
+
+        .topbar-inner {
+            max-width: 1200px;
+            margin: auto;
+            padding: 9px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .topbar a {
+            color: #ffffff;
+        }
+
+        .top-links {
+            display: flex;
+            gap: 22px;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1030;
+            background: #ffffff;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
+        }
+
+        .nav {
+            max-width: 1200px;
+            min-height: 90px;
+            margin: auto;
+            padding: 8px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-logo {
+            width: 200px;
+            height: 70px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            list-style: none;
+            margin-left: auto;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        .nav-links a {
+            color: #000000;
+            padding: 8px 10px;
+            margin-left: 4px;
+            margin-right: 5px;
+            transition: .2s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #333333;
+        }
+
+        .menu-btn {
+            display: none;
+            border: 0;
+            background: var(--navy);
+            color: #ffffff;
+            padding: 10px 13px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 13px 22px;
+            border-radius: 8px;
+            font-weight: 700;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: .25s ease;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            filter: brightness(.96);
+        }
+
+        .btn-blue {
+            background: var(--blue);
+            color: #ffffff;
+        }
+
+        .btn-blue:hover {
+            background: var(--navy);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 620px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(90deg,
+                    rgba(7, 28, 49, .96) 0%,
+                    rgba(7, 28, 49, .82) 43%,
+                    rgba(7, 28, 49, .25) 75%,
+                    rgba(7, 28, 49, .08) 100%),
+                url("assets/img/city2.PNG") center center / cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+            padding: 80px 20px;
+            color: #ffffff;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            color: var(--gold);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: .85rem;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4.7rem);
+            line-height: 1.05;
+            max-width: 760px;
+            margin-bottom: 24px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 1.18rem;
+            color: #eef5fa;
+            margin-bottom: 22px;
+        }
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
+        section {
+            padding: 85px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 48px;
+        }
+
+        .section-heading h2 {
+            color: var(--navy);
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.15;
+            margin-bottom: 15px;
+        }
+
+        .section-heading p {
+            color: var(--gray);
+        }
+
+        /* =========================
+           SOLUTIONS
+        ========================= */
+
+        .solutions {
+            background: var(--light);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 32px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: .25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        .card h3 {
+            color: var(--navy);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: var(--gray);
+        }
+
+        /* =========================
+           EQUIPMENT
+        ========================= */
+
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: 1.05fr .95fr;
+            gap: 55px;
+            align-items: center;
+        }
+
+        .equipment-photo {
+            min-height: 460px;
+            border-radius: 22px;
+            background:
+                linear-gradient(rgba(12, 37, 65, .10), rgba(12, 37, 65, .10)),
+                url("assets/img/officeequipment2.PNG") center center / cover no-repeat;
+            box-shadow: var(--shadow);
+        }
+
+        .equipment-copy h2 {
+            color: var(--navy);
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        .equipment-copy p {
+            color: var(--gray);
+            margin-bottom: 24px;
+        }
+
+        .check-list {
+            list-style: none;
+            margin: 0 0 28px;
+        }
+
+        .check-list li {
+            margin: 12px 0;
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .check-list li::before {
+            content: "✓";
+            display: inline-grid;
+            place-items: center;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: var(--gold);
+            margin-right: 10px;
+            font-weight: 900;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #071a2d;
+            color: #cbd8e4;
+            padding: 60px 20px 20px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        footer h3,
+        footer h4 {
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            font-size: .93rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin: 8px 0;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .copyright {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, .12);
+            font-size: .85rem;
+            text-align: center;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 90px;
+                background: #ffffff;
+                flex-direction: column;
+                align-items: stretch;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, .10);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 12px 10px;
+                margin: 0;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .cards {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .equipment-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .topbar-inner {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .top-links {
+                display: none;
+            }
+
+            .nav {
+                min-height: 80px;
+                padding: 5px 16px;
+            }
+
+            .nav-logo {
+                width: 180px;
+                height: 65px;
+            }
+
+            .nav-links {
+                top: 80px;
+            }
+
+            section {
+                padding: 65px 16px;
+            }
+
+            .hero {
+                min-height: 600px;
+            }
+
+            .hero-content {
+                padding: 60px 16px;
+            }
+
+            .cards,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2.65rem;
+            }
         }
     </style>
 </head>
 
+<body>
 
-<body class="d-flex flex-column h-100">
-    <main class="flex-shrink-0">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-lightf fw-bold ">
-            <div class="container px-5">
-                <a class="navbar-brand" href="index.html"><img src="assets/img/logo8.PNG" width="200" height="100"
-                        alt=""></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation"><span
-                        class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="newindex.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Services.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
+    <!-- Top Bar -->
+    <div class="topbar">
+        <div class="topbar-inner">
+            <div>
+                Advantage Financial Services LLC = Financing • Built Around Your Business
             </div>
-        </nav>
 
-
-        <!--         <header class="bg-light py-5">
-            <div class="container px-5">
- -->
-        <header class="bg-light py-5">
-            <div class="container-fluid px-0">
-                <div class="row gx-5 align-items-center justify-content-center">
-                    <div class="my-5 text-center text-xl-start">
-                        <!--                         <div class="container">-->
-                        <div class="container-fluid px-0">
-                            <div class="image-container">
-                                <img src="assets/img/city2.PNG" alt="Your Background Image">
-                                <h1 class="overlay-text1">Advantage Financial Services LLC</h1>
-                                <h2 class="overlay-text2">We value our customers</h2>
-                                <br>
-                            </div>
-                            <section class="py-5">
-                                <div class="container px-5 my-5">
-                                    <div class="row gx-5 align-items-center">
-                                        <div class="container">
-                                            <div class="image-container">
-                                                <h4 class="fw-bolder text-muted mb-4">Help express our appreciation,
-                                                    mention the code:</h4>
-                                                <h4 class="lead fw-normal text-muted mb-4">"Web Customer Offer"</h4>
-                                                <h4 class="lead fw-normal text-muted mb-4">Forspecial consideration the
-                                                    next time you speak with one of our representatives.</h4>
-                                                <h5 class="lead fw-normal text-muted mb-4">At Advantage Financial
-                                                    Services-We are customer focused
-                                                </h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-
-                            <!-- Features section-->
-                            <section class="py-5" id="features">
-                                <div class="container px-5 my-5">
-                                    <div class="row gx-5">
-                                        <div class="col-lg-4 mb-5 mb-lg-0">
-                                            <h5 class="lead fw-bolder text-muted mb-4">Better Solutions For
-                                                Your
-                                                Business
-                                            </h5>
-                                            <br />
-                                            <h5 class="lead fw-normal text-muted mb-4">"Advantage Financial
-                                                Services
-                                                provides accessible
-                                                financing and
-                                                leasing solutions to fuel growth,
-                                                stability, and long-term success for our vendors, customers,
-                                                commercial
-                                                entities and
-                                                municipalities"</h5>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <div class="row gx-5 row-cols-1 row-cols-md-2">
-                                                <div class="col mb-5 h-100">
-                                                    <div
-                                                        class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
-                                                        <i class="bi bi-collection"></i>
-                                                    </div>
-                                                    <h4 class="lead fw-bolder text-muted mb-4">Great
-                                                        Equipment
-                                                        Leasing
-                                                        Rates
-                                                    </h4>
-                                                    <p class="lead fw-normal text-muted mb-4">Highly
-                                                        competitive,
-                                                        low-cost financing terms
-                                                        that allow businesses to
-                                                        acquire machinery, vehicles, or technology without
-                                                        paying the full purchase price upfront.</p>
-                                                </div>
-                                                <div class="col mb-5 h-100">
-                                                    <div
-                                                        class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
-                                                        <i class="bi bi-building"></i>
-                                                    </div>
-                                                    <h4 class="lead fw-bolder text-muted mb-4">Equipment
-                                                        Loans and
-                                                        Leases
-                                                    </h4>
-                                                    <br>
-                                                    <p class="lead fw-normal text-muted mb-4">A loan
-                                                        involves
-                                                        borrowing
-                                                        to buy the
-                                                        equipment, which you then own. A
-                                                        lease is a long-term rental agreement where you
-                                                        use the equipment and may return or buy it later.
-                                                    </p>
-                                                </div>
-                                                <div class="col mb-5 mb-md-0 h-100">
-                                                    <div
-                                                        class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
-                                                        <i class="bi bi-toggles2"></i>
-                                                    </div>
-                                                    <h4 class="lead fw-bolder text-muted mb-4">
-                                                        Straightforward
-                                                        Quotes &
-                                                        Fix
-                                                        Rates</h4>
-                                                    <br>
-                                                    <p class="lead fw-normal text-muted mb-4">Statements or
-                                                        proverbs
-                                                        that prioritize
-                                                        clarity, honesty, and simplicity.
-                                                        Our quotes celebrate people or concepts that
-                                                        are direct, easy to understand, and free from hidden
-                                                        agendas,
-                                                        manipulation, or
-                                                        excessive complexity</p>
-                                                </div>
-                                                <div class="col h-100">
-                                                    <div
-                                                        class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
-                                                        <i class="bi bi-collection"></i>
-                                                    </div>
-                                                    <h4 class="lead fw-bolder text-muted mb-4">Knowledgeable
-                                                        Leasing
-                                                        &
-                                                        Financing Experts
-                                                    </h4>
-                                                    <br>
-                                                    <p class="lead fw-normal text-muted mb-4">Our
-                                                        professionals help
-                                                        guide individuals and
-                                                        businesses through the
-                                                        complex processes of renting, buying, or financing
-                                                        assets like property, vehicles, or equipment. They
-                                                        bridge
-                                                        the
-                                                        gap between
-                                                        clients and financial institutions, helping to
-                                                        secure the best rates, navigate legal contracts, and
-                                                        structure
-                                                        favorable terms.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </main>
-    <!-- Footer-->
-    <footer class="bg-dark py-4 mt-auto">
-        <div class="container px-5">
-            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                <div class="col-auto">
-                    <div class="small m-0 text-white">Advantage Financial &copy; Copyright 2026 - All Rights Reserved
-                    </div>
-                </div>
+            <div class="top-links">
+                <a href="tel:8609895507">1-860-989-5507</a>
+                <a href="redonecontact.html">Contact Us</a>
             </div>
         </div>
+    </div>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="nav">
+
+            <a class="navbar-brand" href="index.html">
+                <img class="nav-logo" src="assets/img/logo8.PNG" alt="Advantage Financial Services LLC">
+            </a>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                        <li class="nav-item">
+                            <a class="nav-link" href="newindex.html">
+                                Home
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="redoneabout.html">
+                                About
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="redoneservices.html">
+                                Services
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="redonecontact.html">
+                                Contact
+                            </a>
+                        </li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero -->
+        <section class="hero" id="about">
+            <div class="hero-content">
+
+                <span class="eyebrow">CODE: "Web Customer Offer"</span>
+
+                <h1>We Value Our Customers</h1>
+
+                <p>
+                    Help express our appreciation by mentioning the code:
+                </p>
+
+                <p>
+                    <strong>Web Customer Offer</strong>
+                </p>
+
+                <p>
+                    For special consideration the next time you speak with one of our representatives.
+                </p>
+
+                <p>
+                    At Advantage Financial Services, we are customer focused.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Solutions -->
+        <section class="solutions" id="solutions">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        Better Solutions For Your Business
+                    </span>
+
+                    <h2>
+                        Flexible Funding Options for Your Needs
+                    </h2>
+
+                    <p>
+                        Advantage Financial Services provides accessible financing and
+                        leasing solutions to fuel growth, stability, and long-term success
+                        for our vendors, customers, commercial entities and municipalities.
+                    </p>
+
+                </div>
+
+                <div class="cards">
+
+                    <article class="card">
+
+                        <h3>
+                            Great Equipment Leasing Rates
+                        </h3>
+
+                        <p>
+                            Highly competitive, low-cost financing terms that allow
+                            businesses to acquire machinery, vehicles, or technology
+                            without paying the full purchase price upfront.
+                        </p>
+
+                    </article>
+
+                    <article class="card">
+
+                        <h3>
+                            Equipment Loans and Leases
+                        </h3>
+
+                        <p>
+                            A loan involves borrowing to buy the equipment, which you
+                            then own. A lease is a long-term rental agreement where
+                            you use the equipment and may return or buy it later.
+                        </p>
+
+                    </article>
+
+                    <article class="card">
+
+                        <h3>
+                            Quotes & Fixed Rates
+                        </h3>
+
+                        <p>
+                            Straightforward financing options that prioritize clarity,
+                            honesty, and simplicity. We focus on providing clear
+                            information without hidden agendas or unnecessary complexity.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Equipment -->
+        <section id="equipment">
+
+            <div class="container equipment-grid">
+
+                <div class="equipment-photo" aria-label="Commercial equipment">
+                </div>
+
+                <div class="equipment-copy">
+
+                    <span class="eyebrow">
+                        Equipment Solutions
+                    </span>
+
+                    <h2>
+                        Finance the equipment that keeps business moving.
+                    </h2>
+
+                    <p>
+                        From trucks and trailers to construction machinery,
+                        manufacturing equipment and technology, our financing
+                        approach is designed for real-world business needs.
+                    </p>
+
+                    <ul class="check-list">
+
+                        <li>New and used equipment</li>
+
+                        <li>Commercial vehicles and trailers</li>
+
+                        <li>Construction and industrial machinery</li>
+
+                        <li>Manufacturing and material handling equipment</li>
+
+                        <li>Technology and office equipment</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h3>
+                    Advantage Financial Services LLC
+                </h3>
+
+                <p>
+                    Flexible equipment financing and business funding solutions
+                    designed to help companies acquire the tools they need to grow.
+                </p>
+
+            </div>
+
+            <div>
+
+                <h4>
+                    Financing
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        Equipment Financing
+                    </li>
+
+                    <li>
+                        Vendor Financing
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h4>
+                    Contact
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="tel:8609895507">
+                            1-860-989-5507
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mailto:info@advantage-financial.com">
+                            info@advantage-financial.com
+                        </a>
+                    </li>
+
+                    <li>
+                        PO Box 0000<br>
+                        Suite 100<br>
+                        Gallatin TN, 37066
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <span id="year"></span>
+            Advantage Financial &copy; Copyright 2026 - All Rights Reserved
+        </div>
+
     </footer>
 
-    <script src="js/scripts.js"></script>
-
-    <center><button class="BackToTheTop" onclick="Return()">Return To Top!</button></center>
+    <!-- JavaScript -->
     <script>
-        function Return() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
+
+        /* Mobile Navigation */
+
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
+
+        menuBtn.addEventListener("click", function () {
+            navLinks.classList.toggle("open");
+        });
+
+        document.querySelectorAll("#navLinks a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+                navLinks.classList.remove("open");
+            });
+
+        });
+
+        /* Current Year */
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
     </script>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
-    </script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+
 </body>
 
 </html>
