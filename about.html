@@ -18,24 +18,68 @@
 <body class="d-flex flex-column">
     <main class="flex-shrink-0">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-lightf fw-bold ">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fw-bold sticky-top">
+
+            <style>
+                /* Keep navbar at the top */
+                .navbar {
+                    z-index: 1030;
+                }
+
+                /* Override navbar link size and spacing */
+                .navbar .navbar-nav .nav-link {
+                    color: #000000 !important;
+                    font-size: 15px !important;
+                    padding: 8px 10px !important;
+                    margin-left: 4px !important;
+                    margin-right: 5px !important;
+                }
+
+                .navbar .navbar-nav .nav-link:hover {
+                    color: #333333 !important;
+                }
+
+                .navbar .navbar-nav {
+                    margin-left: auto !important;
+                    margin-right: -85px !important;
+                }
+            </style>
+
             <div class="container px-5">
-                <a class="navbar-brand" href="index.html"><img src="assets/img/logo8.PNG" width="200" ; height="100"
-                        alt=""></a>
+
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/logo8.PNG" width="200" height="70" alt="">
+                </a>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation"><span
-                        class="navbar-toggler-icon"></span></button>
+                    aria-expanded="false" aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="newindex.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Services.html">Services</a></li>
-                        <li class="nav-item dropdown">
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="2newindex.html">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="Services.html">Services</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+
                     </ul>
-                    </li>
-                    </ul>
+
                 </div>
             </div>
         </nav>
@@ -76,21 +120,21 @@
             </div>
         </section>
         <!-- About section two-->
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6 order-first order-lg-last"><img class="img-fluid rounded mb-5 mb-lg-0"
-                            src="assets/img/about us.png" alt="..." /></div>
-                    <div class="col-lg-6">
-                        <h2 class="fw-bolder">About US</h2>
-                        <p class="lead fw-normal text-muted mb-0">In an industry that is trying to become automated in
-                            most every aspect, we are more of a traditional
-                            relationship and communication focused finance and leasing company. Over 70 years of market
-                            experience and knowledge in
-                            our management team, we welcome the opportunity to see if we can be a great partner to you
-                            as a Manufacturer,
-                            Distributor, Value Added Reseller, Sales Team and End User. Let’s Talk</p>
-                    </div>
-                </div>
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6 order-first order-lg-last"><img class="img-fluid rounded mb-5 mb-lg-0"
+                    src="assets/img/about us.png" alt="..." /></div>
+            <div class="col-lg-6">
+                <h2 class="fw-bolder">About US</h2>
+                <p class="lead fw-normal text-muted mb-0">In an industry that is trying to become automated in
+                    most every aspect, we are more of a traditional
+                    relationship and communication focused finance and leasing company. Over 70 years of market
+                    experience and knowledge in
+                    our management team, we welcome the opportunity to see if we can be a great partner to you
+                    as a Manufacturer,
+                    Distributor, Value Added Reseller, Sales Team and End User. Let’s Talk</p>
             </div>
+        </div>
+        </div>
         </section>
         <!-- Team members section-->
         <section class="py-5 bg-light">
@@ -102,8 +146,7 @@
                 <div class="row gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
                     <div class="col mb-5 mb-5 mb-xl-0">
                         <div class="text-center">
-                            <img class="img-fluid rounded-circle mb-4 px-4"
-                                src="assets/img/PD PIC png.png" alt="..." />
+                            <img class="img-fluid rounded-circle mb-4 px-4" src="assets/img/PD PIC png.png" alt="..." />
                             <h5 class="fw-bolder">Pete Davison</h5>
                             <div class="fst-italic text-muted">Founder &amp; CEO</div>
                             <br>
@@ -115,8 +158,7 @@
                     </div>
                     <div class="col mb-5 mb-5 mb-xl-0">
                         <div class="text-center">
-                            <img class="img-fluid rounded-circle mb-4 px-3"
-                                src="assets/img/BobPICPNG.PNG" alt="..." />
+                            <img class="img-fluid rounded-circle mb-4 px-3" src="assets/img/BobPICPNG.PNG" alt="..." />
                             <h5 class="fw-bolder">Bob</h5>
                             <div class="fst-italic text-muted">Sales Manager</div>
                         </div>
@@ -135,8 +177,7 @@
                                 src="https://dummyimage.com/150x150/ced4da/6c757d" alt="..." />
                             <h5 class="fw-bolder">Malvina Cilla</h5>
                             <div class="fst-italic text-muted">CTO</div>
-                        </div>
- -->
+                        </div> -->
                 </div>
             </div>
             </div>
@@ -145,23 +186,15 @@
     <!-- Footer-->
     <footer class="bg-dark py-4 mt-auto">
         <div class="container px-5">
-            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+            <div class="row justify-content-center text-center">
                 <div class="col-auto">
-                    <div class="small m-0 text-white">Advantage Financial &copy; Copyright 2026 - All Rights Reserved
+                    <div class="small m-0 text-white">
+                        Advantage Financial &copy; Copyright 2026 - All Rights Reserved
                     </div>
                 </div>
-                <!--                 <div class="col-auto">
-                            <a class="link-light small" href="#!">Privacy</a>
-                            <span class="text-white mx-1">&middot;</span>
-                            <a class="link-light small" href="#!">Terms</a>
-                            <span class="text-white mx-1">&middot;</span>
-                            <a class="link-light small" href="#!">Contact</a>
-                        </div>
-         -->
             </div>
         </div>
     </footer>
-
     <!--     <footer class="bg-dark py-4 mt-auto">
         <div class="container px-5">
             <div class="row align-items-center justify-content-between flex-column flex-sm-row">
@@ -183,7 +216,8 @@
 
     <script src="js/scripts.js"></script>
 
-    <center><button class="BackToTheTop" onclick="Return()">Return To Top!</button></center>
+    <!--     <center><button class="BackToTheTop" onclick="Return()">Return To Top!</button></center>
+ -->
     <script>
         function Return() {
             document.body.scrollTop = 0;
