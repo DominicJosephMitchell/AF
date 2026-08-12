@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Advantage Financial Services LLC - Equipment financing and leasing solutions.">
+    <title>Services | Advantage Financial Services LLC</title>
+
+    <style>
+        :root {
+            --navy: #0c2541;
+            --blue: #1261a8;
+            --light-blue: #eaf4fb;
+            --gold: #f2b632;
+            --white: #fff;
+            --light: #f6f8fa;
+            --dark: #18212b;
+            --gray: #66717d;
+            --border: #dce3e9;
+            --shadow: 0 12px 35px rgba(12, 37, 65, .10);
+            --radius: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--dark);
+            background: #fff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* =========================
+           TOP BAR
+        ========================= */
+
+        .topbar {
+            background: var(--navy);
+            color: #fff;
+            font-size: .9rem;
+        }
+
+        .topbar-inner {
+            max-width: 1200px;
+            margin: auto;
+            padding: 9px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .topbar a {
+            color: #fff;
+        }
+
+        .top-links {
+            display: flex;
+            gap: 22px;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #fff;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: auto;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-logo {
+            width: 200px;
+            height: 65px;
+            object-fit: contain;
+            position: relative;
+            top: 10px;
+            left: 65px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            list-style: none;
+            font-weight: 600;
+            font-size: .94rem;
+        }
+
+        .nav-links a {
+            color: #000;
+            padding: 8px 10px;
+        }
+
+        .nav-links a:hover {
+            color: var(--blue);
+        }
+
+        .menu-btn {
+            display: none;
+            border: 0;
+            background: var(--navy);
+            color: #fff;
+            padding: 10px 13px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 13px 22px;
+            border-radius: 8px;
+            font-weight: 700;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: .25s ease;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            filter: brightness(.96);
+        }
+
+        .btn-blue {
+            background: var(--blue);
+            color: #fff;
+        }
+
+        .btn-blue:hover {
+            background: var(--navy);
+        }
+
+        /* =========================
+           PAGE HERO
+        ========================= */
+
+        .page-hero {
+            min-height: 430px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+
+            background:
+                linear-gradient(90deg,
+                    rgba(7, 28, 49, .96) 0%,
+                    rgba(7, 28, 49, .82) 43%,
+                    rgba(7, 28, 49, .25) 75%,
+                    rgba(7, 28, 49, .08) 100%),
+                url("assets/img/city2.PNG") center center / cover no-repeat;
+        }
+
+        .page-hero-content {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+            padding: 80px 20px;
+            color: #fff;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            color: var(--gold);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: .85rem;
+            margin-bottom: 12px;
+        }
+
+        .page-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.2rem);
+            line-height: 1.05;
+            max-width: 760px;
+            margin-bottom: 24px;
+        }
+
+        .page-hero p {
+            max-width: 700px;
+            font-size: 1.18rem;
+            color: #eef5fa;
+            margin-bottom: 28px;
+        }
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
+        section {
+            padding: 85px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 48px;
+        }
+
+        .section-heading h2 {
+            color: var(--navy);
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.15;
+            margin-bottom: 15px;
+        }
+
+        .section-heading p {
+            color: var(--gray);
+        }
+
+        /* =========================
+           SERVICE INTRO
+        ========================= */
+
+        .services-intro {
+            background: var(--light);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 55px;
+            align-items: center;
+        }
+
+        .service-photo {
+            min-height: 430px;
+            border-radius: 22px;
+
+            background:
+                linear-gradient(rgba(12, 37, 65, .08),
+                    rgba(12, 37, 65, .08)),
+                url("assets/img/leasing.PNG") center center / cover no-repeat;
+
+            box-shadow: var(--shadow);
+        }
+
+        .service-copy h2 {
+            color: var(--navy);
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        .service-copy p {
+            color: var(--gray);
+            margin-bottom: 18px;
+        }
+
+        /* =========================
+           SERVICE FEATURES
+        ========================= */
+
+        .service-options {
+            background: #fff;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: .95fr 1.05fr;
+            gap: 55px;
+            align-items: center;
+        }
+
+        .options-photo {
+            min-height: 470px;
+            border-radius: 22px;
+
+            background:
+                linear-gradient(rgba(12, 37, 65, .08),
+                    rgba(12, 37, 65, .08)),
+                url("assets/img/leasing options.PNG") center center / cover no-repeat;
+
+            box-shadow: var(--shadow);
+        }
+
+        .options-copy h2 {
+            color: var(--navy);
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .options-copy p {
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+
+        /* =========================
+           LEASING TERMS
+        ========================= */
+
+        .leasing-terms {
+            background: var(--light);
+        }
+
+        .terms-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 55px;
+            align-items: center;
+        }
+
+        .terms-photo {
+            min-height: 520px;
+            border-radius: 22px;
+
+            background:
+                linear-gradient(rgba(12, 37, 65, .08),
+                    rgba(12, 37, 65, .08)),
+                url("assets/img/leasing terms.PNG") center center / cover no-repeat;
+
+            box-shadow: var(--shadow);
+        }
+
+        .terms-copy h2 {
+            color: var(--navy);
+            font-size: clamp(1.9rem, 3.5vw, 2.7rem);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .terms-copy h3 {
+            color: var(--blue);
+            font-size: 1.35rem;
+            margin: 25px 0 10px;
+        }
+
+        .terms-copy p {
+            color: var(--gray);
+            margin-bottom: 18px;
+        }
+
+        /* =========================
+           LEASING OPTIONS CARDS
+        ========================= */
+
+        .leasing-cards {
+            background: #fff;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 32px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: .25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        .icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 12px;
+            background: var(--light-blue);
+            color: var(--blue);
+            display: grid;
+            place-items: center;
+            font-size: 1.5rem;
+            margin-bottom: 22px;
+        }
+
+        .card h3 {
+            color: var(--navy);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: var(--gray);
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            padding: 75px 20px;
+
+            background:
+                linear-gradient(100deg,
+                    rgba(18, 97, 168, .96),
+                    rgba(12, 37, 65, .96)),
+                url("assets/img/city2.PNG") center / cover;
+
+            color: #fff;
+        }
+
+        .cta-inner {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: clamp(2rem, 4vw, 3.3rem);
+            line-height: 1.15;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            color: #e4edf5;
+            margin-bottom: 28px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #071a2d;
+            color: #cbd8e4;
+            padding: 60px 20px 20px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        footer h3,
+        footer h4 {
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            font-size: .93rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin: 8px 0;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, .12);
+            font-size: .85rem;
+            text-align: center;
+        }
+
+        /* =========================
+           BACK TO TOP
+        ========================= */
+
+        #backTop {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 45px;
+            height: 45px;
+            border: 0;
+            border-radius: 50%;
+            background: var(--gold);
+            color: var(--navy);
+            font-size: 1.2rem;
+            font-weight: 900;
+            cursor: pointer;
+            display: none;
+            z-index: 900;
+        }
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 95px;
+                background: #fff;
+                flex-direction: column;
+                align-items: stretch;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-logo {
+                left: 0;
+            }
+
+            .service-grid,
+            .options-grid,
+            .terms-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cards {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .service-photo,
+            .options-photo,
+            .terms-photo {
+                min-height: 400px;
+            }
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 650px) {
+
+            .topbar-inner {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .top-links {
+                display: none;
+            }
+
+            section {
+                padding: 65px 16px;
+            }
+
+            .page-hero {
+                min-height: 500px;
+            }
+
+            .page-hero-content {
+                padding: 60px 16px;
+            }
+
+            .page-hero h1 {
+                font-size: 2.65rem;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-photo,
+            .options-photo,
+            .terms-photo {
+                min-height: 300px;
+            }
+
+            .nav {
+                padding: 12px 16px;
+            }
+
+            .nav-logo {
+                width: 180px;
+                height: 65px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+        <div class="topbar-inner">
+
+            <div>
+                Advantage Financial Services LLC = Financing • Built Around Your Business
+            </div>
+
+            <div class="top-links">
+                <a href="tel:8609895507">1-860-989-5507</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- NAVIGATION -->
+    <header>
+
+        <nav class="nav">
+
+            <a class="navbar-brand" href="index.html">
+                <img class="nav-logo" src="assets/img/logo8.PNG" alt="Advantage Financial Services LLC">
+            </a>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li>
+                    <a href="Services.html">Services</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- PAGE HERO -->
+        <section class="page-hero">
+
+            <div class="page-hero-content">
+
+                <span class="eyebrow">
+                    Advantage Financial Services
+                </span>
+
+                <h1>
+                    How can we help you?
+                </h1>
+
+                <p>
+                    In an industry that is trying to become automated in most
+                    every aspect, we are more of a traditional relationship
+                    and communication focused finance and leasing company.
+                </p>
+
+                <a href="#services" class="btn btn-primary">
+                    Check Out Our Services
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- SERVICE SECTION ONE -->
+        <section class="services-intro" id="services">
+
+            <div class="container service-grid">
+
+                <div class="service-photo" aria-label="Equipment leasing">
+                </div>
+
+                <div class="service-copy">
+
+                    <span class="eyebrow">
+                        Our Services
+                    </span>
+
+                    <h2>
+                        Financing solutions built around your business.
+                    </h2>
+
+                    <p>
+                        Over 70 years of market experience and knowledge
+                        in our management team.
+                    </p>
+
+                    <p>
+                        We welcome the opportunity to see if we can be a
+                        great partner to you as a Manufacturer, Distributor,
+                        Value Added Reseller, Sales Team and End User.
+                    </p>
+
+                    <a href="contact.html" class="btn btn-blue">
+                        Talk With Us
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SERVICE SECTION TWO -->
+        <section class="service-options">
+
+            <div class="container options-grid">
+
+                <div class="options-copy">
+
+                    <span class="eyebrow">
+                        Leasing Solutions
+                    </span>
+
+                    <h2>
+                        Advantage Financial Services offers a variety
+                        of leasing options.
+                    </h2>
+
+                    <p>
+                        Our professionals will work with you to design
+                        the right plan to meet your specific business
+                        needs and objectives.
+                    </p>
+
+                    <p>
+                        Judge the Advantage of financing your needs
+                        through leasing.
+                    </p>
+
+                    <h3>
+                        Operating Lease
+                    </h3>
+
+                    <p>
+                        With an operating lease, the length or term is
+                        shorter than the expected useful life of the
+                        equipment. This is a popular lease option for
+                        computers and high-tech equipment.
+                    </p>
+
+                </div>
+
+                <div class="options-photo" aria-label="Leasing options">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SERVICE SECTION THREE -->
+        <section class="leasing-terms">
+
+            <div class="container terms-grid">
+
+                <div class="terms-photo" aria-label="Leasing terms">
+                </div>
+
+                <div class="terms-copy">
+
+                    <span class="eyebrow">
+                        Leasing Terms
+                    </span>
+
+                    <h2>
+                        Flexible lease terms designed around your
+                        equipment and business needs.
+                    </h2>
+
+                    <p>
+                        A shorter lease term makes it more convenient
+                        for a business to upgrade equipment more
+                        frequently — staying ahead of the obsolescence
+                        curve.
+                    </p>
+
+                    <p>
+                        An operating lease will often include a fair
+                        market value purchase option, giving the
+                        business a choice of keeping equipment that
+                        may still meet its needs.
+                    </p>
+
+                    <p>
+                        This type of lease, while giving the business
+                        flexibility to more frequently upgrade equipment,
+                        generally results in higher monthly payments
+                        than a longer-term lease.
+                    </p>
+
+                    <h3>
+                        Finance Lease
+                    </h3>
+
+                    <p>
+                        With a finance lease, the term is longer,
+                        more nearly approximating the useful life
+                        of the equipment. Payments tend to be lower
+                        because of the longer term and less residual
+                        risk for the lessor.
+                    </p>
+
+                    <p>
+                        Finance leases may include customized options
+                        based upon the cost of the equipment and your
+                        business needs.
+                    </p>
+
+                    <h3>
+                        Lease-Back
+                    </h3>
+
+                    <p>
+                        For a number of reasons, your business may wish
+                        to initially purchase the needed equipment.
+                        Then, after a period of time, the equipment is
+                        sold to a lessor and leased back, freeing
+                        your business capital.
+                    </p>
+
+                    <p>
+                        Talk with a knowledgeable Advantage Financial
+                        Services representative about your needs.
+                    </p>
+
+                    <h3>
+                        Fair Market Value Lease
+                    </h3>
+
+                    <p>
+                        A lease containing an option to purchase the
+                        leased property at the end of the lease term
+                        at its then fair market value.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SERVICE CARDS -->
+        <section class="leasing-cards">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        Financing Options
+                    </span>
+
+                    <h2>
+                        Leasing solutions for different business needs.
+                    </h2>
+
+                    <p>
+                        Our professionals can help you determine which
+                        financing structure best fits your business.
+                    </p>
+
+                </div>
+
+
+                <div class="cards">
+
+                    <article class="card">
+
+                        <div class="icon">
+                            ✓
+                        </div>
+
+                        <h3>
+                            Operating Lease
+                        </h3>
+
+                        <p>
+                            A shorter-term structure that can provide
+                            flexibility for businesses that frequently
+                            upgrade equipment and technology.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <div class="icon">
+                            ✓
+                        </div>
+
+                        <h3>
+                            Finance Lease
+                        </h3>
+
+                        <p>
+                            A longer-term financing option designed
+                            to more closely match the useful life
+                            of the equipment.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <div class="icon">
+                            ✓
+                        </div>
+
+                        <h3>
+                            Lease-Back
+                        </h3>
+
+                        <p>
+                            A financing structure that can allow a
+                            business to unlock capital from equipment
+                            it already owns.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+        <section class="cta">
+
+            <div class="cta-inner">
+
+                <h2>
+                    Let's find the right financing solution for you.
+                </h2>
+
+                <p>
+                    Talk with Advantage Financial Services about your
+                    equipment financing and leasing needs.
+                </p>
+
+                <a href="contact.html" class="btn btn-primary">
+                    Contact Us
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h3>
+                    Advantage Financial Services LLC
+                </h3>
+
+                <p>
+                    Flexible equipment financing and business funding
+                    solutions designed to help companies acquire the
+                    tools they need to grow.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Financing
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="Services.html">
+                            Equipment Financing
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="Services.html">
+                            Equipment Leasing
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="Services.html">
+                            Vendor Financing
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Contact
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="tel:8609895507">
+                            1-860-989-5507
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mailto:info@advantage-financial.com">
+                            info@advantage-financial.com
+                        </a>
+                    </li>
+
+                    <li>
+                        PO Box 0000<br>
+                        Suite 100<br>
+                        Gallatin TN, 37066
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <span id="year"></span>
+            Advantage Financial &copy; Copyright 2026 - All Rights Reserved
+
+        </div>
+
+    </footer>
+
+
+    <!-- BACK TO TOP -->
+    <button id="backTop" aria-label="Back to top">
+        ↑
+    </button>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        /* =========================
+           MOBILE NAVIGATION
+        ========================= */
+
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
+
+        menuBtn.addEventListener("click", () => {
+            navLinks.classList.toggle("open");
+        });
+
+        document.querySelectorAll("#navLinks a").forEach(link => {
+
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("open");
+            });
+
+        });
+
+
+        /* =========================
+           BACK TO TOP
+        ========================= */
+
+        const backTop = document.getElementById("backTop");
+
+        window.addEventListener("scroll", () => {
+
+            backTop.style.display =
+                window.scrollY > 500 ? "block" : "none";
+
+        });
+
+        backTop.addEventListener("click", () => {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        });
+
+
+        /* =========================
+           CURRENT YEAR
+        ========================= */
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+    </script>
+
+</body>
+
+</html>
