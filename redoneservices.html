@@ -13,7 +13,7 @@
             --blue: #1261a8;
             --light-blue: #eaf4fb;
             --gold: #f2b632;
-            --white: #fff;
+            --white: #ffffff;
             --light: #f6f8fa;
             --dark: #18212b;
             --gray: #66717d;
@@ -35,7 +35,7 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             color: var(--dark);
-            background: #fff;
+            background: #ffffff;
             line-height: 1.6;
         }
 
@@ -55,7 +55,7 @@
 
         .topbar {
             background: var(--navy);
-            color: #fff;
+            color: #ffffff;
             font-size: .9rem;
         }
 
@@ -70,7 +70,7 @@
         }
 
         .topbar a {
-            color: #fff;
+            color: #ffffff;
         }
 
         .top-links {
@@ -80,20 +80,22 @@
 
         /* =========================
            NAVIGATION
+           MATCHES SCRIPT 1
         ========================= */
 
         header {
             position: sticky;
             top: 0;
-            z-index: 1000;
-            background: #fff;
+            z-index: 1030;
+            background: #ffffff;
             box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
         }
 
         .nav {
             max-width: 1200px;
+            min-height: 90px;
             margin: auto;
-            padding: 15px 20px;
+            padding: 8px 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -107,36 +109,45 @@
 
         .nav-logo {
             width: 200px;
-            height: 65px;
+            height: 70px;
             object-fit: contain;
-            position: relative;
-            top: 10px;
-            left: 65px;
+            display: block;
+
+            /* IMPORTANT:
+               No left/top positioning.
+               This matches Script 1.
+            */
+            position: static;
         }
 
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 24px;
+            gap: 5px;
             list-style: none;
-            font-weight: 600;
-            font-size: .94rem;
+            margin-left: auto;
+            font-weight: 700;
+            font-size: 15px;
         }
 
         .nav-links a {
-            color: #000;
+            color: #000000;
             padding: 8px 10px;
+            margin-left: 4px;
+            margin-right: 5px;
+            transition: .2s ease;
         }
 
-        .nav-links a:hover {
-            color: var(--blue);
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #333333;
         }
 
         .menu-btn {
             display: none;
             border: 0;
             background: var(--navy);
-            color: #fff;
+            color: #ffffff;
             padding: 10px 13px;
             border-radius: 8px;
             cursor: pointer;
@@ -172,7 +183,7 @@
 
         .btn-blue {
             background: var(--blue);
-            color: #fff;
+            color: #ffffff;
         }
 
         .btn-blue:hover {
@@ -204,7 +215,7 @@
             width: 100%;
             margin: auto;
             padding: 80px 20px;
-            color: #fff;
+            color: #ffffff;
         }
 
         .eyebrow {
@@ -305,7 +316,7 @@
         ========================= */
 
         .service-options {
-            background: #fff;
+            background: #ffffff;
         }
 
         .options-grid {
@@ -389,7 +400,7 @@
         ========================= */
 
         .leasing-cards {
-            background: #fff;
+            background: #ffffff;
         }
 
         .cards {
@@ -399,7 +410,7 @@
         }
 
         .card {
-            background: #fff;
+            background: #ffffff;
             padding: 32px;
             border: 1px solid var(--border);
             border-radius: var(--radius);
@@ -446,7 +457,7 @@
                     rgba(12, 37, 65, .96)),
                 url("assets/img/city2.PNG") center / cover;
 
-            color: #fff;
+            color: #ffffff;
         }
 
         .cta-inner {
@@ -486,7 +497,7 @@
 
         footer h3,
         footer h4 {
-            color: #fff;
+            color: #ffffff;
             margin-bottom: 15px;
         }
 
@@ -503,7 +514,7 @@
         }
 
         .footer-links a:hover {
-            color: #fff;
+            color: #ffffff;
         }
 
         .copyright {
@@ -537,7 +548,8 @@
         }
 
         /* =========================
-           TABLET
+           RESPONSIVE
+           MATCHES SCRIPT 1
         ========================= */
 
         @media (max-width: 900px) {
@@ -547,34 +559,36 @@
                 position: absolute;
                 left: 0;
                 right: 0;
-                top: 95px;
-                background: #fff;
+                top: 90px;
+                background: #ffffff;
                 flex-direction: column;
                 align-items: stretch;
                 padding: 20px;
-                box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, .10);
             }
 
             .nav-links.open {
                 display: flex;
             }
 
+            .nav-links a {
+                display: block;
+                padding: 12px 10px;
+                margin: 0;
+            }
+
             .menu-btn {
                 display: block;
             }
 
-            .nav-logo {
-                left: 0;
+            .cards {
+                grid-template-columns: 1fr 1fr;
             }
 
             .service-grid,
             .options-grid,
             .terms-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .cards {
-                grid-template-columns: 1fr 1fr;
             }
 
             .footer-grid {
@@ -588,10 +602,6 @@
             }
         }
 
-        /* =========================
-           MOBILE
-        ========================= */
-
         @media (max-width: 650px) {
 
             .topbar-inner {
@@ -601,6 +611,20 @@
 
             .top-links {
                 display: none;
+            }
+
+            .nav {
+                min-height: 80px;
+                padding: 5px 16px;
+            }
+
+            .nav-logo {
+                width: 180px;
+                height: 65px;
+            }
+
+            .nav-links {
+                top: 80px;
             }
 
             section {
@@ -615,16 +639,13 @@
                 padding: 60px 16px;
             }
 
-            .page-hero h1 {
-                font-size: 2.65rem;
-            }
-
-            .cards {
-                grid-template-columns: 1fr;
-            }
-
+            .cards,
             .footer-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .page-hero h1 {
+                font-size: 2.65rem;
             }
 
             .service-photo,
@@ -632,23 +653,18 @@
             .terms-photo {
                 min-height: 300px;
             }
-
-            .nav {
-                padding: 12px 16px;
-            }
-
-            .nav-logo {
-                width: 180px;
-                height: 65px;
-            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- TOP BAR -->
+    <!-- =========================
+         TOP BAR
+    ========================= -->
+
     <div class="topbar">
+
         <div class="topbar-inner">
 
             <div>
@@ -656,59 +672,92 @@
             </div>
 
             <div class="top-links">
-                <a href="tel:8609895507">1-860-989-5507</a>
-                <a href="redonecontact.html">Contact Us</a>
+
+                <a href="tel:8609895507">
+                    1-860-989-5507
+                </a>
+
+                <a href="redonecontact.html">
+                    Contact Us
+                </a>
+
             </div>
 
         </div>
+
     </div>
 
 
-    <!-- NAVIGATION -->
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
     <header>
+
         <nav class="nav">
 
             <a class="navbar-brand" href="index.html">
+
                 <img class="nav-logo" src="assets/img/logo8.PNG" alt="Advantage Financial Services LLC">
+
             </a>
 
+
             <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+
                 ☰
+
             </button>
 
+
             <ul class="nav-links" id="navLinks">
+
                 <li class="nav-item">
+
                     <a class="nav-link" href="index.html">
                         Home
                     </a>
+
                 </li>
 
                 <li class="nav-item">
+
                     <a class="nav-link" href="redoneabout.html">
                         About
                     </a>
+
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="redoneservices.html">
+
+                    <a class="nav-link active" href="redoneservices.html">
                         Services
                     </a>
+
                 </li>
 
                 <li class="nav-item">
+
                     <a class="nav-link" href="redonecontact.html">
                         Contact
                     </a>
+
                 </li>
+
             </ul>
 
         </nav>
+
     </header>
 
 
     <main>
 
-        <!-- PAGE HERO -->
+
+        <!-- =========================
+             PAGE HERO
+        ========================= -->
+
         <section class="page-hero">
 
             <div class="page-hero-content">
@@ -736,13 +785,17 @@
         </section>
 
 
-        <!-- SERVICE SECTION ONE -->
+        <!-- =========================
+             SERVICE SECTION ONE
+        ========================= -->
+
         <section class="services-intro" id="services">
 
             <div class="container service-grid">
 
                 <div class="service-photo" aria-label="Equipment leasing">
                 </div>
+
 
                 <div class="service-copy">
 
@@ -765,7 +818,7 @@
                         Value Added Reseller, Sales Team and End User.
                     </p>
 
-                    <a href="contact.html" class="btn btn-blue">
+                    <a href="redonecontact.html" class="btn btn-blue">
                         Talk With Us
                     </a>
 
@@ -776,7 +829,10 @@
         </section>
 
 
-        <!-- SERVICE SECTION TWO -->
+        <!-- =========================
+             SERVICE SECTION TWO
+        ========================= -->
+
         <section class="service-options">
 
             <div class="container options-grid">
@@ -816,6 +872,7 @@
 
                 </div>
 
+
                 <div class="options-photo" aria-label="Leasing options">
                 </div>
 
@@ -824,13 +881,17 @@
         </section>
 
 
-        <!-- SERVICE SECTION THREE -->
+        <!-- =========================
+             SERVICE SECTION THREE
+        ========================= -->
+
         <section class="leasing-terms">
 
             <div class="container terms-grid">
 
                 <div class="terms-photo" aria-label="Leasing terms">
                 </div>
+
 
                 <div class="terms-copy">
 
@@ -916,7 +977,10 @@
         </section>
 
 
-        <!-- SERVICE CARDS -->
+        <!-- =========================
+             SERVICE CARDS
+        ========================= -->
+
         <section class="leasing-cards">
 
             <div class="container">
@@ -1004,7 +1068,10 @@
         </section>
 
 
-        <!-- CTA -->
+        <!-- =========================
+             CTA
+        ========================= -->
+
         <section class="cta">
 
             <div class="cta-inner">
@@ -1018,7 +1085,7 @@
                     equipment financing and leasing needs.
                 </p>
 
-                <a href="contact.html" class="btn btn-primary">
+                <a href="redonecontact.html" class="btn btn-primary">
                     Contact Us
                 </a>
 
@@ -1029,7 +1096,10 @@
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
     <footer>
 
         <div class="footer-grid">
@@ -1058,19 +1128,19 @@
                 <ul class="footer-links">
 
                     <li>
-                        <a href="Services.html">
+                        <a href="redoneservices.html">
                             Equipment Financing
                         </a>
                     </li>
 
                     <li>
-                        <a href="Services.html">
+                        <a href="redoneservices.html">
                             Equipment Leasing
                         </a>
                     </li>
 
                     <li>
-                        <a href="Services.html">
+                        <a href="redoneservices.html">
                             Vendor Financing
                         </a>
                     </li>
@@ -1102,7 +1172,7 @@
 
                     <li>
                         143 Nashville Pike,<br>
-                        Unit 402, #183 <br>
+                        Unit 402, #183<br>
                         Gallatin TN, 37066
                     </li>
 
@@ -1123,13 +1193,21 @@
     </footer>
 
 
-    <!-- BACK TO TOP -->
+    <!-- =========================
+         BACK TO TOP
+    ========================= -->
+
     <button id="backTop" aria-label="Back to top">
+
         ↑
+
     </button>
 
 
-    <!-- JAVASCRIPT -->
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
     <script>
 
         /* =========================
@@ -1139,14 +1217,19 @@
         const menuBtn = document.getElementById("menuBtn");
         const navLinks = document.getElementById("navLinks");
 
-        menuBtn.addEventListener("click", () => {
+        menuBtn.addEventListener("click", function () {
+
             navLinks.classList.toggle("open");
+
         });
 
-        document.querySelectorAll("#navLinks a").forEach(link => {
 
-            link.addEventListener("click", () => {
+        document.querySelectorAll("#navLinks a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
                 navLinks.classList.remove("open");
+
             });
 
         });
@@ -1158,14 +1241,22 @@
 
         const backTop = document.getElementById("backTop");
 
-        window.addEventListener("scroll", () => {
+        window.addEventListener("scroll", function () {
 
-            backTop.style.display =
-                window.scrollY > 500 ? "block" : "none";
+            if (window.scrollY > 500) {
+
+                backTop.style.display = "block";
+
+            } else {
+
+                backTop.style.display = "none";
+
+            }
 
         });
 
-        backTop.addEventListener("click", () => {
+
+        backTop.addEventListener("click", function () {
 
             window.scrollTo({
                 top: 0,
